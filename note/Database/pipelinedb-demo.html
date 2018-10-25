@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PipelineDB 流计算：物联网数据统计 | 📚 Better Note</title>
+    <meta name="description" content="CNine的日常笔记">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.242fc66c.css" as="style"><link rel="preload" href="/assets/js/app.4a818b93.js" as="script"><link rel="preload" href="/assets/js/9.f6ed2ab6.js" as="script"><link rel="prefetch" href="/assets/js/4.35f0d1c9.js"><link rel="prefetch" href="/assets/js/1.2764e25f.js"><link rel="prefetch" href="/assets/js/2.3c2850b4.js"><link rel="prefetch" href="/assets/js/3.18bb06a9.js"><link rel="prefetch" href="/assets/js/5.4ad33705.js"><link rel="prefetch" href="/assets/js/6.c6eac44b.js"><link rel="prefetch" href="/assets/js/7.3eed38dd.js"><link rel="prefetch" href="/assets/js/8.7d8b3b07.js"><link rel="prefetch" href="/assets/js/10.52c4d1e0.js"><link rel="prefetch" href="/assets/js/11.2ff72b0e.js"><link rel="prefetch" href="/assets/js/12.a112165a.js"><link rel="prefetch" href="/assets/js/13.e58aa3dd.js"><link rel="prefetch" href="/assets/js/14.f9b0f117.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.242fc66c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      📚 Better Note
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">📗 笔记</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/note/FrontEnd/" class="nav-link">🦄 Web前端</a></li><li class="dropdown-item"><!----><a href="/note/NodeJS/" class="nav-link">🐢 NodeJS</a></li><li class="dropdown-item"><!----><a href="/note/Database/" class="nav-link router-link-active">🐘 数据库</a></li><li class="dropdown-item"><!----><a href="/note/Linux/" class="nav-link">🐧 Linux</a></li><li class="dropdown-item"><!----><a href="/note/Explore/" class="nav-link">🚀 探索</a></li></ul></div></div><div class="nav-item"><a href="/star/" class="nav-link">👓 收藏集</a></div><div class="nav-item"><a href="/quick/" class="nav-link">⚡️ 速食记</a></div><a href="https://github.com/Aysnine/better-note" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">📗 笔记</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/note/FrontEnd/" class="nav-link">🦄 Web前端</a></li><li class="dropdown-item"><!----><a href="/note/NodeJS/" class="nav-link">🐢 NodeJS</a></li><li class="dropdown-item"><!----><a href="/note/Database/" class="nav-link router-link-active">🐘 数据库</a></li><li class="dropdown-item"><!----><a href="/note/Linux/" class="nav-link">🐧 Linux</a></li><li class="dropdown-item"><!----><a href="/note/Explore/" class="nav-link">🚀 探索</a></li></ul></div></div><div class="nav-item"><a href="/star/" class="nav-link">👓 收藏集</a></div><div class="nav-item"><a href="/quick/" class="nav-link">⚡️ 速食记</a></div><a href="https://github.com/Aysnine/better-note" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>🐘 数据库</span><!----></p><ul class="sidebar-group-items"><li><a href="/note/Database/" class="sidebar-link">数据库</a></li><li><a href="/note/Database/pipelinedb-demo.html" class="active sidebar-link">PipelineDB 流计算：物联网数据统计</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="pipelinedb-流计算：物联网数据统计"><a href="#pipelinedb-流计算：物联网数据统计" aria-hidden="true" class="header-anchor">#</a> PipelineDB 流计算：物联网数据统计</h1><blockquote><p>PipelineDB 是类 PostgreSQL 数据库，所以 PostgreSQL 中的功能也是可用的，但请注意自己的 PipelineDB 是基于哪个 PostgreSQL 版本。</p></blockquote><p>什么是流计算？这里针对物联网方面的数据处理，有一个小例子。</p><p>某校给每间学生寝室安装了智能热水器，共 100 个按 1~100 编号，热水器可以根据自身情况，灵活上传实时功耗。</p><p><strong>常规的例子</strong>，<strong>智能热水器实时数据</strong>表 <code>heater_online</code> 测试 SQL 如下：</p><div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 清理旧数据，释放磁盘空间</span>
+<span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> heater_online<span class="token punctuation">;</span>
+
+<span class="token comment">-- 创建 智能热水器实时数据 表</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> heater_online <span class="token punctuation">(</span>
+	id <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">--  设备编号</span>
+	tdp <span class="token keyword">NUMERIC</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">-- 功耗</span>
+	t <span class="token keyword">TIMESTAMP</span> <span class="token keyword">DEFAULT</span> LOCALTIMESTAMP <span class="token comment">-- 数据上传时间</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 插入 1000w 条测试数据</span>
+<span class="token comment">-- 从 5 年前开始，100 个设备随机上传数据</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> heater_online
+<span class="token keyword">SELECT</span>
+	<span class="token punctuation">(</span> random<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">99</span> <span class="token punctuation">)</span> ::<span class="token keyword">INT</span> <span class="token operator">+</span><span class="token number">1</span> <span class="token keyword">AS</span> id<span class="token punctuation">,</span>
+	random<span class="token punctuation">(</span><span class="token punctuation">)</span> ::<span class="token keyword">NUMERIC</span><span class="token punctuation">(</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span> <span class="token keyword">AS</span> tdp<span class="token punctuation">,</span>
+	LOCALTIMESTAMP <span class="token operator">-</span> <span class="token keyword">INTERVAL</span> <span class="token string">'5 year'</span> <span class="token operator">+</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span>i <span class="token operator">*</span> <span class="token number">15.7</span> <span class="token operator">||</span> <span class="token string">'s'</span><span class="token punctuation">)</span>::<span class="token keyword">INTERVAL</span>
+<span class="token keyword">FROM</span>
+	generate_series <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10000000</span> <span class="token punctuation">)</span> <span class="token keyword">AS</span> s <span class="token punctuation">(</span> i <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">-- ! 会产生 500M 左右的数据</span>
+
+<span class="token comment">-- 统计每个设备的上传次数、总功耗</span>
+<span class="token keyword">SELECT</span>
+	id<span class="token punctuation">,</span>
+	<span class="token function">COUNT</span><span class="token punctuation">(</span> <span class="token operator">*</span> <span class="token punctuation">)</span> times<span class="token punctuation">,</span>
+	<span class="token function">SUM</span> <span class="token punctuation">(</span> tdp <span class="token punctuation">)</span> tdp_sum
+<span class="token keyword">FROM</span>
+	heater_online
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> id<span class="token punctuation">;</span>
+
+<span class="token comment">-- 查看最后一条数据</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> heater_online <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> t <span class="token keyword">DESC</span> <span class="token keyword">LIMIT</span> <span class="token number">1</span><span class="token punctuation">;</span>
+</code></pre></div><p>此处的统计求平均，导致每次查询，数据库都要去重新计算所有员工 <code>salary</code> 之和，再除以人数而得。
+当员工数量上涨，这个统计速度也会变慢。统计语句，我的笔记本大概用了 3s 完成。</p><p><strong>🤔 数据库好笨，不会给统计数据的计算内容做个缓存吗？</strong></p><p>下面用 PipelineDB 的方式来解决这个问题：</p><div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 清理旧数据，释放磁盘空间</span>
+<span class="token keyword">DROP</span> CONTINUOUS <span class="token keyword">VIEW</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> state_heater_online<span class="token punctuation">;</span>
+<span class="token keyword">DROP</span> STREAM <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> io_heater_online<span class="token punctuation">;</span>
+
+<span class="token comment">-- 创建流，可看作数据入口，一张只需要插入数据的表</span>
+<span class="token keyword">CREATE</span> STREAM io_heater_online <span class="token punctuation">(</span>
+	id <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">--  设备编号</span>
+	tdp <span class="token keyword">NUMERIC</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">-- 功耗</span>
+	t <span class="token keyword">TIMESTAMP</span> <span class="token comment">-- 数据上传时间，注意不能 default</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 创建统计视图，类似于创建视图</span>
+<span class="token keyword">CREATE</span> CONTINUOUS <span class="token keyword">VIEW</span> state_heater_online <span class="token keyword">AS</span>
+<span class="token keyword">SELECT</span>
+	id<span class="token punctuation">,</span>
+	<span class="token function">COUNT</span><span class="token punctuation">(</span> <span class="token operator">*</span> <span class="token punctuation">)</span> times<span class="token punctuation">,</span>
+	<span class="token function">SUM</span> <span class="token punctuation">(</span> tdp <span class="token punctuation">)</span> tdp_sum
+<span class="token keyword">FROM</span>
+	io_heater_online
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> id<span class="token punctuation">;</span>
+
+<span class="token comment">-- 向流插入一千万条随机数据</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> io_heater_online
+<span class="token keyword">SELECT</span>
+	<span class="token punctuation">(</span> random<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">99</span> <span class="token punctuation">)</span> ::<span class="token keyword">INT</span> <span class="token operator">+</span><span class="token number">1</span> <span class="token keyword">AS</span> id<span class="token punctuation">,</span>
+	random<span class="token punctuation">(</span><span class="token punctuation">)</span> ::<span class="token keyword">NUMERIC</span><span class="token punctuation">(</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span> <span class="token keyword">AS</span> tdp<span class="token punctuation">,</span>
+	LOCALTIMESTAMP <span class="token operator">-</span> <span class="token keyword">INTERVAL</span> <span class="token string">'5 year'</span> <span class="token operator">+</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span>i <span class="token operator">*</span> <span class="token number">15.7</span> <span class="token operator">||</span> <span class="token string">'s'</span><span class="token punctuation">)</span>::<span class="token keyword">INTERVAL</span>
+<span class="token keyword">FROM</span>
+	generate_series <span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10000000</span> <span class="token punctuation">)</span> <span class="token keyword">AS</span> s <span class="token punctuation">(</span> i <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">-- ! 会产生 500M 左右的数据</span>
+
+<span class="token comment">-- 直接从统计视图查询统计的结果</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> state_heater_online<span class="token punctuation">;</span>
+</code></pre></div><p>PipelineDB 的思想，就是先定义好数据的入口，也就是创建流，然后基于流，把统计的 SQL 语句创建成 CONTINUOUS VIEW。
+当有数据插入流，PipelineDB 会去更新相关的 CONTINUOUS VIEW，所用时间几乎是恒定的，毫秒级别，因为统计已经在数据插入的时候完成了合并计算。</p></div><div class="page-edit"><div class="edit-link"><a href="https://github.com/Aysnine/better-note/edit/master/docs/note/Database/pipelinedb-demo.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div><div class="last-updated"><span class="prefix">上次更新: </span><span class="time">2018-10-22 16:42:25</span></div></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/note/Database/" class="prev router-link-active">
+          数据库
+        </a></span><!----></p></div></div></div></div>
+    <script src="/assets/js/9.f6ed2ab6.js" defer></script><script src="/assets/js/app.4a818b93.js" defer></script>
+  </body>
+</html>

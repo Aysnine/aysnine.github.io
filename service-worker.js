@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "7958ba59e7d0af442e9272d9566803e4"
+    "revision": "449ff21e78582847d2a717eaea88a273"
   },
   {
     "url": "assets/css/0.styles.a3a91898.css",
@@ -192,8 +192,8 @@ self.__precacheManifest = [
     "revision": "c01bdb2ab788516b66ae789ec6808db5"
   },
   {
-    "url": "assets/js/app.e1c69b6a.js",
-    "revision": "df2435d7ea81fe28eb97217793a28fcc"
+    "url": "assets/js/app.e1dcc558.js",
+    "revision": "8e32adec88a979e4e5ed0efe2819c2bc"
   },
   {
     "url": "buddy-logos/logos/100tb.svg",
@@ -4633,7 +4633,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "1517421b44c5c78e723047eacefbda47"
+    "revision": "ac05ac7867f5e9715622be4299b76781"
   },
   {
     "url": "me-rev.png",
@@ -4645,63 +4645,63 @@ self.__precacheManifest = [
   },
   {
     "url": "note/Database/index.html",
-    "revision": "4206223592ce5e0c187525bac9a88c56"
+    "revision": "ecb3da2871e73a6ad9ff5aa5e9675258"
   },
   {
     "url": "note/Database/mysql-cross-host-sync.html",
-    "revision": "c3c320a072c2d53d8c8b27c435bb156a"
+    "revision": "24106b0775400f519cfe41d66e8b8ba2"
   },
   {
     "url": "note/Database/pipelinedb-demo.html",
-    "revision": "9d2d16ffa52430d8380a105332eb3b8f"
+    "revision": "4c62ca4ab76aea8f0741d3b15d7fc0ff"
   },
   {
     "url": "note/Explore/index.html",
-    "revision": "e481fcf3199e588d08e99d21c31d8749"
+    "revision": "b0abb66aed43cc9ba2f8e2bd49d33a3d"
   },
   {
     "url": "note/FrontEnd/elementui-tree-disabled.html",
-    "revision": "94feba130ebff9544922eab6b5b913c9"
+    "revision": "a290f6ffda2e1fabd9c662193aa0315a"
   },
   {
     "url": "note/FrontEnd/index.html",
-    "revision": "dcc637705bee3db1210d9a8fae34f99a"
+    "revision": "928dfa77395a0c8ee8fc799021a9f48c"
   },
   {
     "url": "note/FrontEnd/mock-lose-cookies-dbg.html",
-    "revision": "ff981b94362f8a3d8370e5980f21ceda"
+    "revision": "0c4e466144712b0d6010a29089d51e49"
   },
   {
     "url": "note/FrontEnd/webpack-source-self-path.html",
-    "revision": "0cb7b7a922d81f959c5dcd0245845ce9"
+    "revision": "b78e7d73f23625cf0b85171cfa82f319"
   },
   {
     "url": "note/index.html",
-    "revision": "a4abb4bb7a489e45b2495932963a86ef"
+    "revision": "97c1fa3901cf9998651a5dcd48e7ea60"
   },
   {
     "url": "note/Linux/centos7-ready.html",
-    "revision": "811fa47954b0b8c2c05a9a0a7cbf5a7b"
+    "revision": "0ac16c9509a112fc3c872bf4d5a44ebf"
   },
   {
     "url": "note/Linux/index.html",
-    "revision": "4daf845285aba6df50c9c060cd27dfa4"
+    "revision": "731cc6ce5950a10af90f8aa5570484e1"
   },
   {
     "url": "note/NodeJS/index.html",
-    "revision": "a0cee2ceb95606b1d38f055be2da9abf"
+    "revision": "4e48d88589bcf30742df69c8866f428a"
   },
   {
     "url": "project/index.html",
-    "revision": "79c08b32df234d1aa5a2a0544180a489"
+    "revision": "160f0bc9672fc2613753dcf4a7c82748"
   },
   {
     "url": "quick/index.html",
-    "revision": "962e9d9efeaf76b7cd27ff55a13729f5"
+    "revision": "6950618fb623eeb397d49bc58c1b955a"
   },
   {
     "url": "star/index.html",
-    "revision": "effd4a93ec6b2740b6cec5a8245e1531"
+    "revision": "9321f633420203344e069d31c2ced995"
   },
   {
     "url": "static/av-min.js",

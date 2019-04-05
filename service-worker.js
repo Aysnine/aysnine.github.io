@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "aaac5bed69f438fd6f9044d74a086562"
+    "revision": "e0876b4ddda3b0bb57dad78492ff0ac6"
   },
   {
     "url": "assets/css/0.styles.a3a91898.css",
@@ -140,32 +140,36 @@ self.__precacheManifest = [
     "revision": "cf680694a487096d3d79271cefc6597d"
   },
   {
-    "url": "assets/js/19.148deb66.js",
-    "revision": "8460ba0dbf4834bf7b71f4f455e5061f"
+    "url": "assets/js/19.00442286.js",
+    "revision": "7af1dcf6abc76e6ded92e95d8e189308"
   },
   {
     "url": "assets/js/2.9ad54e99.js",
     "revision": "34388d79f190b4aeb0ceed971b3c01dd"
   },
   {
-    "url": "assets/js/20.3084446d.js",
-    "revision": "9cd86af3b2583a9208775a6b0a8682c0"
+    "url": "assets/js/20.d53d3834.js",
+    "revision": "56796fce16c68f62a7ce03edc8be59ba"
   },
   {
-    "url": "assets/js/21.8a111b66.js",
-    "revision": "df3e51e1d47148218baf4e2076757f87"
+    "url": "assets/js/21.196078a4.js",
+    "revision": "7c6e89e82df353f3041b4dd1f777a4bd"
   },
   {
-    "url": "assets/js/22.f523bbfe.js",
-    "revision": "734da32c8778119433e704593d71c143"
+    "url": "assets/js/22.8b06f6ea.js",
+    "revision": "31595b98bd2bc90322730b1b73f80d94"
   },
   {
-    "url": "assets/js/23.96b5c02f.js",
-    "revision": "ec0fbac5ddac6a39ad164cb671fc3577"
+    "url": "assets/js/23.3b773eba.js",
+    "revision": "2a72a419f6c1490fde4e96ea16947670"
   },
   {
-    "url": "assets/js/3.ed12de6a.js",
-    "revision": "776113e93dd3d2a8d2b21e09c0d9e4a4"
+    "url": "assets/js/24.f2355984.js",
+    "revision": "44dc2d98cc9ed56820476cc50e573e3d"
+  },
+  {
+    "url": "assets/js/3.51887766.js",
+    "revision": "476fb7362e776bcd1f6cd6339277dfd3"
   },
   {
     "url": "assets/js/4.3c614874.js",
@@ -192,8 +196,8 @@ self.__precacheManifest = [
     "revision": "c01bdb2ab788516b66ae789ec6808db5"
   },
   {
-    "url": "assets/js/app.b1d26acc.js",
-    "revision": "11709e9338cee91e790498603ebe4fd8"
+    "url": "assets/js/app.b05adfe2.js",
+    "revision": "6511e64e0ccce50b50e69d86cd88847e"
   },
   {
     "url": "buddy-logos/logos/100tb.svg",
@@ -4633,7 +4637,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "eb5526510c1bdd7df77eed88fb048036"
+    "revision": "e6de33a08f705ffeb7684594b7e77d08"
   },
   {
     "url": "me-rev.png",
@@ -4645,63 +4649,67 @@ self.__precacheManifest = [
   },
   {
     "url": "note/Database/index.html",
-    "revision": "3c49aac7ac3c68306f09f25e9a49e6ac"
+    "revision": "80303a6100876f87319d41eff846247c"
   },
   {
     "url": "note/Database/mysql-cross-host-sync.html",
-    "revision": "5b82e77d85a67559d372631f460e0795"
+    "revision": "b8d5ff466fcb0afe56e47a37598a6d90"
   },
   {
     "url": "note/Database/pipelinedb-demo.html",
-    "revision": "88f5643ac2f3a4b0fc22d930ac95bcc4"
+    "revision": "7d0cbf124be91ef4088ec379080f2f28"
   },
   {
     "url": "note/Explore/index.html",
-    "revision": "1f5e6c5192f96272afcce679c78f5d0d"
+    "revision": "57fe4f32da212f5a8071bdf523334ae2"
   },
   {
     "url": "note/FrontEnd/elementui-tree-disabled.html",
-    "revision": "080880769a264c56858dc4a668227b11"
+    "revision": "bf8a3620b16ab994259ca3e20b17ba83"
   },
   {
     "url": "note/FrontEnd/index.html",
-    "revision": "aaf40093ef4b2733c113989b7da30113"
+    "revision": "1c80ff5e82c4487a5c60dca0af0d08d9"
   },
   {
     "url": "note/FrontEnd/mock-lose-cookies-dbg.html",
-    "revision": "3133a0cdffeb56ba46966ffecf042652"
+    "revision": "6915700255f0a07814df5190c8580404"
   },
   {
     "url": "note/FrontEnd/webpack-source-self-path.html",
-    "revision": "bbb88184bc2972ac64c69fb7957325c2"
+    "revision": "d3416e299a8227b92bdb5f1bfa280474"
   },
   {
     "url": "note/index.html",
-    "revision": "c693b125451e69fd872e23cdcf03bdb9"
+    "revision": "016e52581f26f967df3e5c7c997f957e"
   },
   {
     "url": "note/Linux/centos7-ready.html",
-    "revision": "187d7e872439785c0071b3a62a1a8a37"
+    "revision": "089b8b97804c1a8d4f0edc85458d5b84"
   },
   {
     "url": "note/Linux/index.html",
-    "revision": "78e35f3bbde9cb20a39bc330db7869c9"
+    "revision": "b6cb2cfdec1d75295823087fef9c3d70"
+  },
+  {
+    "url": "note/Linux/mac-use-ohmyzsh.html",
+    "revision": "ab7f1ae4b4b5d181a9a4e2b50ab7f860"
   },
   {
     "url": "note/NodeJS/index.html",
-    "revision": "37cee67ff5c7353f4ec8b9bbb467987f"
+    "revision": "6c7c4e324d96652b3e85e4aeb8e77eec"
   },
   {
     "url": "project/index.html",
-    "revision": "09b82eff3c73171cc9c5e5b2d00a3b40"
+    "revision": "d8ce03bbd09c6267162f7b67b9c78a18"
   },
   {
     "url": "quick/index.html",
-    "revision": "32cb7cfe7cbf5a387c3bd0812754cc2d"
+    "revision": "dd1d59833008f964fd84f980f557cf61"
   },
   {
     "url": "star/index.html",
-    "revision": "95d49727fd5096549b7f0697bccb3c04"
+    "revision": "2d2b2c59a95ec250b63a43332eb5e58d"
   },
   {
     "url": "static/av-min.js",
